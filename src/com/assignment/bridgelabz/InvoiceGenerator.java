@@ -16,6 +16,19 @@ public class InvoiceGenerator {
         return totalFare;
 	}
 	
+    public int getNumberOfRides(Ride[] rides) {
+		
+		return rides.length;
+	}
+    
+    public double calculateAverageRideCost(Ride[] rides) {
+	double totalFare=0;
+	for(Ride ride:rides) {
+		totalFare += calculateFare(ride.getDistance(), ride.getTime());
+	  }
+	 return totalFare / rides.length;
+}
+    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
